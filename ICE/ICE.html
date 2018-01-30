@@ -2,10 +2,11 @@
 <html lang = 'en'>
   <head>
     <meta charset="utf-8"/>
-	  <title>Homepage</title>
+	  <title>Zhiyi Ma Homepage</title>
   </head>
   <body>
-    <h1>Group</h1>
+    <h1>Zhiyi Ma Website</h1>
+    <!--nav-->
     <nav>
       <a href="https://xiccli.github.io/ice1/ice.html">Xi Li</a><!--need update later-->
       <a href="https://huiyihuang.github.io/ICE1/ICE.html">Huiyi Huang</a>
@@ -13,35 +14,45 @@
       <a href="https://bannyhe.github.io/ICE1/ICE.html">Mu He</a>
     </nav>
 	  <form>
+      <!--name and date-->
+      <br>
   	  Name:
 		  <input type="text" name="name" id = "name"><br>
 		  <label for="dob">DOB:</label>
 		  <input type="date" name="DOB" id = "dob"><br><br>
-
+      <!--snack-->
 		  <strong>Please enter your choice of snack:</strong><br>
       <p>A snack is a portion of food, smaller than a regular meal, generally eaten between meals. Snacks come in a variety of forms including packaged snack foods and other processed foods, as well as items made from fresh ingredients at home.</p>
-      <img width="560" height="315" src="img/pizza.jpg" alt="pizza"><br>
-		  <input type="radio" name="snack" value="pizza">  Pizza<br><br><br>
-      <img width="560" height="315" src="img/donut.jpg" alt="donut"><br>
-  		<input type="radio" name="snack" value="donut"> Donut<br><br><br>
-      <img width="560" height="315" src="img/vegan.jpg" alt="vegan stuff"><br>
-  		<input type="radio" name="snack" value="vegan"> Vegan Stuff<br><br><br>
-
+      <span style="text-align:left"><img width=33% height=auto src="img/pizza.jpg" alt="pizza"/></span>
+      <span style="text-align:center"><img width=33% height=auto src="img/donut.jpg" alt="donut"/></span>
+      <span style="text-align:right"><img width=33% height=auto src="img/vegan.jpg" alt="vegan stuff"/></span>
+      <br>
+      <input type="radio" name="snack" id="pizza"/><label for="pizza">Pizza&emsp;&emsp;</label>
+      <input type="radio" name="snack" id="donut"/><label for="donut">Donut&emsp;&emsp;</label>
+      <input type="radio" name="snack" id="vegan"/><label for="vegan">Vegan Stuff</label>
+      <br>
+      <br>
+      <!--drink-->
   		<strong>Please enter your choice of drink:</strong><br>
       <p>A drink or beverage is a liquid intended for human consumption. In addition to their basic function of satisfying thirst, drinks play important roles in human culture. Common types of drinks include plain water, milk, juices, coffee, tea, and soft drinks. In addition, alcoholic drinks such as wine, beer, and liquor, which contain the drug ethanol, have been part of human culture and development for 8,000 years.</p>
-      <img width="560" height="315" src="img/coffee.jpg" alt="coffee"><br>
-		  <input type="radio" name="snack" value="coffee"> Coffee<br><br><br>
-  		<img width="560" height="315" src="img/tea.jpg" alt="tea"><br>
-      <input type="radio" name="snack" value="tea"> Tea<br><br><br>
-      <img width="560" height="315" src="img/water.jpg" alt="water"><br>
-  		<input type="radio" name="snack" value="water"> Water<br><br><br>
+      <span style="text-align:left"><img width=33% height=auto src="img/coffee.jpg" alt="pizza"/></span>
+      <span style="text-align:center"><img width=33% height=auto src="img/tea.jpg" alt="donut"/></span>
+      <span style="text-align:right"><img width=33% height=auto src="img/water.jpg" alt="vegan stuff"/></span>
+      <br>
+      <input type="radio" name="drink" id="coffee"/><label for="coffee">Coffee&emsp;&emsp;</label>
+      <input type="radio" name="drink" id="tea"/><label for="tea">Tea&emsp;&emsp;</label>
+      <input type="radio" name="drink" id="water"/><label for="water">Water</label>
 	</form>
+  <!--Sketch-->
   <h1>Sketch</h1>
-  <img width="560" height="425" src="img/sketch.jpg" alt="sketch"><br>
+  <img width="560" height="425" src="img/sketch.jpg" alt="sketch"/><br>
+  <!--Video-->
   <h1>Video</h1>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/XVMg8JSEEu0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </body>
   <footer>
     <small>Copyright &copy; 2018 Zhiyi Ma</small>
+    <!--back to top button-->
+    <button type="button"><a href="#">TOP</a></button>
   </footer>
 </html>
