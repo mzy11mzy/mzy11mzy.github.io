@@ -20,6 +20,7 @@
 @media only screen and (min-width: 1000px){
   /* Navigation responsive */
   .top-nav .logo{
+    margin-top: 0.4%;
 		text-align: left;
     width: 5%;
     display: inline-block;
@@ -29,7 +30,7 @@
     width: 50%;
     border-top: 0px;
     float: right;
-    margin-top: 1%;
+    margin-top: 1.4%;
     margin-right: 0px;
   }
   /* Image responsive */
