@@ -1,6 +1,8 @@
 body {
-  background-color: #545549;
-  margin:0px;
+  background-color: #999999;
+  margin-top:0px;
+  margin-left:6%;
+  margin-right: 6%;
 }
 
 h1, h2, a, p, li {
@@ -34,7 +36,7 @@ float:left;
 
 nav a {
   display: block;
-  width: 210px;
+  width: 190px;
   color: white;
   background-color:black;
   text-align: center;
@@ -42,17 +44,26 @@ nav a {
   margin-left: 5px;
 }
 
-nav a:link { text-decoration: none;color: white} 
+nav a:link { text-decoration: none;color: white}
+
+#wrap {
+  background-color: #545549;
+}
+
+h1 {
+  margin: 0px;
+}
 
 #content ul {
   list-style: none;
   text-align: center;
+  margin: -15px;
 }
 
 aside {
   float: right;
   width: 13%;
-  height: 438px;
+  height: 381px;
   background-color: white;
 }
 
