@@ -32,7 +32,7 @@ html, body, header, footer{
     padding: 0;
 }
 header, footer, .logo {
-	background-color: #211D24;
+	background-color: #000000;
 	color: #DDDDDA;
 }
 body{
@@ -85,7 +85,7 @@ header{
 .top-nav ul{
 	list-style-type: none;
 	padding: 0;
-	background-color: #211D24; /*CHANGE*/
+	background-color: #000000; /*CHANGE*//*#211D24*/
 	margin: 0;
 	display: block;
 }
@@ -138,7 +138,7 @@ header{
 
 /*-----LOGO-----*/
 .logo{
-	background-color: #211D24; /*CHANGE*/
+	background-color: #000000; /*CHANGE*/
 	margin: 0;
 	text-align: center;
 	padding: .25em .75em;
