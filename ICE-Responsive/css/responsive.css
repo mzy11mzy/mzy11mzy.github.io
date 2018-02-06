@@ -40,9 +40,11 @@
   }
   #yellow-img,#purple-img {
     display: inline-block;
-    width: 22%;
+    width: 22.6%;
+    margin-right: 1%;
   }
   #purple-img {
+    margin-left: 0%;
     margin-right: 0.7%;
   }
 }
