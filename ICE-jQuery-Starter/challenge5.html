@@ -36,8 +36,21 @@
 	}
 	</style>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	<script type="text/javascript">
-	// I used Two functions here.  Starter idea at: 
+	$(document).ready(function(){
+		$(".preview").on('focus mouseover', function(){
+			$("#image").text($(this).attr("alt"));
+			$("#image").css('background-image','url("' + $(this).attr("src") + '")');
+		})
+
+		$(".preview").on('blur mouseleave',function(){
+			$("#image").text("Please hover over an image below");
+			$("#image").css('background-image','');
+		})
+	});
+	// I used Two functions here.  Starter idea at:
 	// https://codepen.io/ColleenEMc/pen/XmZzWw
 	</script>
 </head>
@@ -49,21 +62,20 @@
 		</div>
 
 		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-		<img class = "preview" 
-			alt = "Styling with a Bandana" 
+		<img class = "preview" tabindex = "1"
+			alt = "Styling with a Bandana"
 			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg";
 			>
 
 
-		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->	
-		<img class = "preview" 
-			alt = "With My Boy" 
-			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG";>
-	
 		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-		<img class = "preview" tabindex = "1" 
-			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
+		<img class = "preview" tabindex = "2"
+			alt = "With My Boy"
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG";>
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" tabindex = "3"
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg"
 			alt = "Young Puppy";>
 </body>
 </html>
-	
