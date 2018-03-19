@@ -4,6 +4,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Employment Application Form</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-form-helpers.min.css" rel="stylesheet">
+		<link href="formStyle.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -75,6 +78,7 @@
 		<button id="addDegree"> Add degree </button>
 </div>
 		</fieldset>
+		<br>
 
 			<fieldset>
 			<legend>Work Experience:</legend>
@@ -104,6 +108,7 @@
 				<label><input type="checkbox" name="position" value="full-time"> Full-time</label><br>
 				<label><input type="checkbox" name="position" value="part-time"> Part-time</label><br>
 			</fieldset>
+			<br>
 			<!-- Resume ( ) and cover letter (optional) -->
 
 			<fieldset>
@@ -111,6 +116,7 @@
 			<label>Upload Resume: *<input type="file" name="resume" accept="application/pdf"  ></label><br>
 			<label>Upload Cover Letter: <input type="file" name="coverletter" accept="application/pdf"></label><br>
 			</fieldset>
+			<br>
 
 			<fieldset>
 			<legend>Position:</legend>
@@ -139,8 +145,7 @@
 				</optgroup>
 			</select><br>
 
-			Office Location:
-			<input list="locations" name="locations">
+			<!--Office Location:<input list="locations" name="locations">
 			<datalist id="locations">
 				<option value="New York">
 				<option value="San Francisco">
@@ -148,7 +153,18 @@
 				<option value="Ann Arbor">
 				<option value="Chicago">
 				<option value="Pittsburgh">
-			</datalist><br>
+			</datalist><br>-->
+
+			<div id="location">
+			<label> Office Location:
+			<select name="locations">
+				<option value="New York">New York</option>
+				<option value="San Francisco">San Francisco</option>
+				<option value="Detroit">Detroit</option>
+				<option value="Ann Arbor">Ann Arbor</option>
+				<option value="Chicago">Chicago</option>
+				<option value="Pittsburgh">Pittsburgh</option>
+		  </select></label><br></div>
 
 			Expected Start Date: <input type="date" name="startdate"><br>
 

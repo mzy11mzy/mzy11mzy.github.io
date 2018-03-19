@@ -45,3 +45,9 @@ span {
     color: #fff;
     margin-top: -3px;
 }
+
+u {
+  font: normal 20px 'Roboto', serif;
+  color: #0091EA;
+  margin-bottom: 5px;
+}
