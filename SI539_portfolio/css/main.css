@@ -1,6 +1,6 @@
 .navbar {
   margin-bottom: 0;
-  border: 0;
+  border: 1;
   background-color: #fff;
 }
 
@@ -21,7 +21,6 @@
   color: #72CFF8;
 }
 
-/*overlook above*/
 .jumbotron {
   display: flex;
   align-items: center;
@@ -65,15 +64,10 @@
   margin-bottom: 25px;
 }
 
-.footer {
-}
-
-.contact-link {
-  font-size: 1.7em;
-  margin: 0.3em 0.3em;
-  color: rgba(0,0,0,0.7);
-}
-
-.footer p{
-  color: rgba(0,0,0,0.7);
+footer {
+  width: 100%;
+  margin-bottom: 0;
+  border: 1;
+  color: #FFF;
+  background-color: #5E4485;
 }
