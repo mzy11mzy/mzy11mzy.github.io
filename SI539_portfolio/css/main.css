@@ -1,0 +1,79 @@
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+  background-color: #fff;
+}
+
+.navbar-brand {
+  float: left;
+}
+
+.navbar-brand {
+  color:#fff;
+}
+
+.navbar-brand img{
+  width:4%;
+  margin: 0;
+}
+
+.navbar-default .navbar-nav .active .a, .navbar-default .navbar-nav .active .a:focus, .navbar-default .navbar-nav .active .a:hover {
+  color: #72CFF8;
+}
+
+/*overlook above*/
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.container figure img{
+  width:100%;
+  margin-bottom: 5%;
+}
+
+.project-real-content {
+  height: auto;
+  overflow: auto;
+}
+
+.project-real-content .regular {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 175%;
+  margin-bottom: 40px;
+
+.project-real-content h2 {
+  color: black;
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.project-real-content h3 {
+  font-size: 18px;
+  color: #4a4a4a;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.project-real-content .img-responsive {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.footer {
+}
+
+.contact-link {
+  font-size: 1.7em;
+  margin: 0.3em 0.3em;
+  color: rgba(0,0,0,0.7);
+}
+
+.footer p{
+  color: rgba(0,0,0,0.7);
+}
