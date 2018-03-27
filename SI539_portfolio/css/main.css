@@ -1,15 +1,11 @@
 .navbar {
   margin-bottom: 0;
-  border: 1;
-  background-color: #fff;
+  border: 0;
+  background-color: #F8F8F8;
 }
 
 .navbar-brand {
   float: left;
-}
-
-.navbar-brand {
-  color:#fff;
 }
 
 .navbar-brand img{
@@ -24,12 +20,16 @@
 .jumbotron {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: #F8F8F8;
 }
 
 .container figure img{
   width:100%;
   margin-bottom: 5%;
+}
+
+.project-detail {
+  margin-top: 10%;
 }
 
 .project-real-content {
@@ -43,6 +43,7 @@
   font-size: 16px;
   line-height: 175%;
   margin-bottom: 40px;
+}
 
 .project-real-content h2 {
   color: black;
@@ -66,8 +67,15 @@
 
 footer {
   width: 100%;
-  margin-bottom: 0;
-  border: 1;
-  color: #FFF;
-  background-color: #5E4485;
+  margin-top: 2%;
+  padding: 3%;
+  color: #000;
+  background-color: #F8F8F8;
+  /*border-top: 1px solid #000;*/
+}
+
+i {
+  font-size: 30px;
+  margin: 30px 20px;
+  color: #000;
 }
