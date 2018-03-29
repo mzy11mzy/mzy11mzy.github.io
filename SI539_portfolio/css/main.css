@@ -3,7 +3,10 @@
   font-size: 18px;
 }
 
-
+#myNavbar {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .navbar-brand {
     width: 50%;
     left: 0;
