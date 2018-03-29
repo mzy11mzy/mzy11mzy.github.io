@@ -1,35 +1,47 @@
-.navbar {
-  margin-bottom: 0;
-  border: 0;
-  background-color: #F8F8F8;
+.navbar-nav li a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
 }
+
 
 .navbar-brand {
-  float: left;
+    width: 50%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px !important;
+    display: block;
 }
+.navbar-toggle {
+    z-index:3;
+}
+
+.navbar {
+  padding-top: 2%;
+  margin-bottom: 0;
+  border: 0;
+  background-color: #FFF;
+  position: relative;
+}
+
+.navbar, .navbar-default {
+  height: 8em;
+}
+
+
 
 .navbar-brand img{
-  width:4%;
+  width:80px;
   margin: 0;
-}
-
-.navbar-default .navbar-nav .active .a, .navbar-default .navbar-nav .active .a:focus, .navbar-default .navbar-nav .active .a:hover {
-  color: #72CFF8;
-}
-
-.jumbotron {
-  display: flex;
-  align-items: center;
-  background-color: #F8F8F8;
 }
 
 .container figure img{
   width:100%;
+  margin-top: 5%;
   margin-bottom: 5%;
-}
-
-.project-detail {
-  margin-top: 2%;
 }
 
 .project-real-content {
@@ -67,10 +79,9 @@
 
 footer {
   width: 100%;
-  margin-top: 2%;
   padding: 3%;
   color: #000;
-  background-color: #F8F8F8;
+  background-color: #FFF;
   /*border-top: 1px solid #000;*/
 }
 
@@ -79,3 +90,36 @@ i {
   margin: 30px 20px;
   color: #000;
 }
+
+/*加加加*/
+
+.header {
+  width: 101%;
+  padding: 2em 0 1em;
+  background: #FFF;
+  font-size: 3em;
+  line-height: 0;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.header-im {
+  margin: 0;
+  display: inline-block;
+  height: 2em;
+  overflow: hidden;
+  color: #000;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5em;
+ }
+
+ .slogan {
+   font-family: "Open Sans";
+   font-size: 20px;
+   font-weight: 600;
+   color: rgba(92,102,173,0.6);
+   letter-spacing: .02em;
+   line-height: 1.5em
+ }
