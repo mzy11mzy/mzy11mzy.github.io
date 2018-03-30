@@ -1,134 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>MetaLife</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img/index/logo.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-</head>
-<body>
-  <!--nav bar-->
-  <header>
-    <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-    <a class="navbar-brand" href="index.html"><img src="img/index/logo.png" alt="logo"></a>
-    <div class="collapse navbar-collapse" id="myNavbar">
+  <head>
+    <title>MetaLife</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/index/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
 
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="#works">Works</a></li>
-        <li><a href="visual.html">Visual</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="about.html">About</a></li>
-        <li><a href="file/Resume.pdf">Resume</a></li>
-      </ul>
-    </div>
-    </nav>
-  </header>
+  <body>
+    <!--nav bar-->
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/index/logo.png" alt="logo"></a>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <a href="#works">Works</a></li>
+            <li>
+              <a href="visual.html">Visual</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="about.html">About</a></li>
+            <li>
+              <a href="file/Resume.pdf">Resume</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="project-detail">
+      <div class="container">
+        <div class="project-image row">
+          <figure class="class=" project-real-content " col-sm-12 col-md-12">
+            <img src="img/metalife/metalife.jpg" alt="metalife"></figure>
+        </div>
+        <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+          <h2>Introduction</h2>
+          <p class="regular">What is Life? If a liquid metal droplet can hunt for game, play with companions, and even display personality traits such as shyness, curiosity, brightness and naughtiness, is it alive?</p>
+          <video autoplay loop controls="controls" width="100%" height="auto" name="animation" src="img/metalife/metalife.mp4"></video>
+        </div>
+        <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+          <h2>Brainstorming</h2>
+          <p class="regular">First we considered how the "personalities" of the metal liquid can be presented individually. Then we contributed our ideas to a central mind map and discussed how to realize them. This process was really exciting and impressive.</p></div>
+        <div class="project-real-content col-md-4 col-md-offset-2">
+          <img class="img-responsive" src="img/metalife/b1.jpg" alt="brainstorm1" style="margin-bottom:10px"></div>
+        <div class="project-real-content col-md-4">
+          <img class="img-responsive" src="img/metalife/b2.jpg" alt="brainstorm2" style="margin-bottom:10px"></div>
+        <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+          <h2>Programming</h2>
+          <p class="regular">I worked with another team member, Chenrui Xie, and used Arduino to realize the behaviors of these liquid mollusks. We used Arduino Mega board as the brain of each installation, and used relays to control electricity to switch on or off. By comparing the distance information collected by the sensors, the Arduino Leonardo microcontroller board successfully manipulated relays to control the fluid metal to exhibit various traits.</p></div>
+        <div class="project-real-content col-md-4 col-md-offset-2">
+          <img class="img-responsive" src="img/metalife/p1.jpg" alt="programming1" style="margin-bottom:10px"></div>
+        <div class="project-real-content col-md-4">
+          <img class="img-responsive" src="img/metalife/p2.jpg" alt="programming2" style="margin-bottom:10px"></div>
+        <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+          <h2>Fabricating</h2>
+          <p class="regular">This part was far beyond my imagination. Since the environment of the exhibition was intricate and had many disruptive factors, many programs that ran successfully in isolation failed to work in context. To solve the problem, I classified the environment and visitor behaviors and set up different trigger situations through programming.</p></div>
+        <div class="project-real-content col-md-4 col-md-offset-2">
+          <img class="img-responsive" src="img/metalife/f1.jpg" alt="fabricating1" style="margin-bottom:10px"></div>
+        <div class="project-real-content col-md-4">
+          <img class="img-responsive" src="img/metalife/f2.jpg" alt="fabricating2" style="margin-bottom:10px"></div>
+        <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+          <h2>Outcome</h2>
+          <p class="regular">MetaLife is a series of interactive installations, representing different "personalities" of liquid metal "mollusks". When interacting with the audience, the mollusks present personalities and hopefully provide the audience to wonder what life actually is.</p></div>
+        <div class="project-real-content col-md-4 col-md-offset-2">
+          <img class="img-responsive" src="img/metalife/shy.gif" alt="shy" style="margin-bottom:10px">
+          <p class="regular text-center">Shyness</p></div>
+        <div class="project-real-content col-md-4">
+          <img class="img-responsive" src="img/metalife/curious.gif" alt="curious" style="margin-bottom:10px">
+          <p class="regular text-center">Curiousity</p></div>
+        <div class="project-real-content col-md-4 col-md-offset-2">
+          <img class="img-responsive" src="img/metalife/intelligence.gif" alt="intelligence" style="margin-bottom:10px">
+          <p class="regular text-center">Intelligence</p></div>
+        <div class="project-real-content col-md-4">
+          <img class="img-responsive" src="img/metalife/mischief.gif" alt="mischief" style="margin-bottom:10px">
+          <p class="regular text-center">Mischief</p></div>
+        <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+          <h2>Reflection</h2>
+          <p class="regular">Just as John Lasseter once said, "It’s not the technology that entertains people, it’s what you do with the technology.” The combination of design methodologies and Human Computer Interaction technologies successfully turned the abstract ideas into tangible products. Although currently this project is still confined to laboratories, I believe it can become the first step to exploring a new interaction method or even building a shapeshifting robot.</p></div>
+      </div>
+      </div>
+    </section>
+    <!-- Bottom -->
+    <footer class="container-fluid text-center">
+      <a class="contact-link" href="mailto:zhiyima@umich.edu">
+        <i class="far fa-envelope"></i>
+      </a>
+      <a class="contact-link" href="https://www.instagram.com/mzy00mzy/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/zhiyima/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a class="contact-link" href="https://github.com/mzy11mzy" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <p>2018 © Designed & Coded by Zhiyi Ma.</p>
+    </footer>
+  </body>
 
-  <section class="project-detail">
-    <div class="container">
-      <div class="project-image row">
-        <figure class="class="project-real-content" col-sm-12 col-md-12">
-          <img src="img/metalife/metalife.jpg" alt="metalife">
-        </figure>
-      </div>
-
-      <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-        <h2>Introduction</h2>
-        <p class="regular"> What is Life? If a liquid metal droplet can hunt for game, play with companions, and even display personality traits such as shyness, curiosity, brightness and naughtiness, is it alive?</p>
-        <video autoplay loop controls="controls" width="100%" height="auto" name="animation" src="img/metalife/metalife.mp4"></video>
-      </div>
-
-      <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-        <h2>Brainstorming</h2>
-        <p class="regular">First we considered how the "personalities" of the metal liquid can be presented individually. Then we contributed our ideas to a central mind map and discussed how to realize them. This process was really exciting and impressive.</p>
-      </div>
-
-      <div class="project-real-content col-md-4 col-md-offset-2">
-        <img class="img-responsive" src="img/metalife/b1.jpg" alt="brainstorm1" style="margin-bottom:10px">
-      </div>
-      <div class="project-real-content col-md-4">
-        <img class="img-responsive" src="img/metalife/b2.jpg" alt="brainstorm2" style="margin-bottom:10px">
-      </div>
-
-      <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-        <h2>Programming</h2>
-        <p class="regular">I worked with another team member, Chenrui Xie, and used Arduino to realize the behaviors of these liquid mollusks. We used Arduino Mega board as the brain of each installation, and used relays to control electricity to switch on or off. By comparing the distance information collected by the sensors, the Arduino Leonardo microcontroller board successfully manipulated relays to control the fluid metal to exhibit various traits.</p>
-      </div>
-
-      <div class="project-real-content col-md-4 col-md-offset-2">
-        <img class="img-responsive" src="img/metalife/p1.jpg" alt="programming1" style="margin-bottom:10px">
-      </div>
-      <div class="project-real-content col-md-4">
-        <img class="img-responsive" src="img/metalife/p2.jpg" alt="programming2" style="margin-bottom:10px">
-      </div>
-
-      <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-        <h2>Fabricating</h2>
-        <p class="regular">This part was far beyond my imagination. Since the environment of the exhibition was intricate and had many disruptive factors, many programs that ran successfully in isolation failed to work in context. To solve the problem, I classified the environment and visitor behaviors and set up different trigger situations through programming.</p>
-      </div>
-
-      <div class="project-real-content col-md-4 col-md-offset-2">
-        <img class="img-responsive" src="img/metalife/f1.jpg" alt="fabricating1" style="margin-bottom:10px">
-      </div>
-      <div class="project-real-content col-md-4">
-        <img class="img-responsive" src="img/metalife/f2.jpg" alt="fabricating2" style="margin-bottom:10px">
-      </div>
-
-      <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-        <h2>Outcome</h2>
-        <p class="regular">MetaLife is a series of interactive installations, representing different "personalities" of liquid metal "mollusks". When interacting with the audience, the mollusks present personalities and hopefully provide the audience to wonder what life actually is.</p>
-      </div>
-
-      <div class="project-real-content col-md-4 col-md-offset-2">
-        <img class="img-responsive" src="img/metalife/shy.gif" alt="shy" style="margin-bottom:10px">
-        <p class="regular text-center">Shyness</p>
-      </div>
-      <div class="project-real-content col-md-4">
-        <img class="img-responsive" src="img/metalife/curious.gif" alt="curious" style="margin-bottom:10px">
-        <p class="regular text-center">Curiousity</p>
-      </div>
-      <div class="project-real-content col-md-4 col-md-offset-2">
-        <img class="img-responsive" src="img/metalife/intelligence.gif" alt="intelligence" style="margin-bottom:10px">
-        <p class="regular text-center">Intelligence</p>
-      </div>
-      <div class="project-real-content col-md-4">
-        <img class="img-responsive" src="img/metalife/mischief.gif" alt="mischief" style="margin-bottom:10px">
-        <p class="regular text-center">Mischief</p>
-      </div>
-
-      <div class="project-real-content col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-        <h2>Reflection</h2>
-        <p class="regular">Just as John Lasseter once said, "It’s not the technology that entertains people, it’s what you do with the technology.” The combination of design methodologies and Human Computer Interaction technologies successfully turned the abstract ideas into tangible products. Although currently this project is still confined to laboratories, I believe it can become the first step to exploring a new interaction method or even building a shapeshifting robot.</p>
-      </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Bottom -->
-  <footer class="container-fluid text-center">
-    <a class="contact-link" href="mailto:zhiyima@umich.edu"><i class="far fa-envelope"></i></a>
-    <a class="contact-link" href="https://www.instagram.com/mzy00mzy/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a class="contact-link" href="https://www.linkedin.com/in/zhiyima/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a class="contact-link" href="https://github.com/mzy11mzy" target="_blank"><i class="fab fa-github"></i></a>
-    <p>2018 © Designed & Coded by Zhiyi Ma.</p>
-  </footer>
-
-</body>
 </html>
