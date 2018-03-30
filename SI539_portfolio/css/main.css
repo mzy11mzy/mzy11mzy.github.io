@@ -126,3 +126,9 @@ i {
    letter-spacing: .02em;
    line-height: 1.5em
  }
+
+ #map {
+   height: 400px;
+   width: 100%;
+   background-color: grey
+}
