@@ -115,13 +115,12 @@
       }</script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDizlpYSUQQelvhDe8Udfbd54sA3KpkdG0&callback=initMap"></script>
     <script>
-    google.maps.event.addListener(this.map, 'tilesloaded', function(evt){
-    $(this.getDiv()).find("img").each(function(i, eimg){
-      if(!eimg.alt || eimg.alt ===""){
-         eimg.alt = "Google Maps Image";
-      }
-    });
- });
+    google.maps.event.addListener(this.map, 'tilesloaded', function() {
+var images = document.querySelectorAll('#map img');
+images.forEach(function(image) {
+  image.alt = "Google Maps Image";
+});
+});
     </script>
   </body>
 
