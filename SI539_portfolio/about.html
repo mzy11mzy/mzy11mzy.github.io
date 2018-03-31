@@ -79,7 +79,7 @@
         <div class="row text-center">
           <h2 style="margin: 40px">You can find me...</h2></div>
         <div class="project-real-content col-md-8 col-md-offset-2">
-          <div id="map" alt ="Ann Arbor"><area alt="Ann Arbor" shape="rect" coords="169,111,324,238" href="http://www.google.com"/></div>
+          <div id="map"></div>
         </div>
       </div>
     </section>
@@ -114,6 +114,15 @@
         });
       }</script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDizlpYSUQQelvhDe8Udfbd54sA3KpkdG0&callback=initMap"></script>
+    <script>
+    google.maps.event.addListener(this.map, 'tilesloaded', function(evt){
+    $(this.getDiv()).find("img").each(function(i, eimg){
+      if(!eimg.alt || eimg.alt ===""){
+         eimg.alt = "Google Maps Image";
+      }
+    });
+ });
+    </script>
   </body>
 
 </html>
