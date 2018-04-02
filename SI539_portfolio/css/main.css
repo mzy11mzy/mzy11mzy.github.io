@@ -17,15 +17,15 @@
   background-color: white;
 }
 .navbar-brand {
-    width: 50%;
-    left: 0;
-    top: 0;
-    text-align: center;
-    margin: auto;
-    position: absolute;
-    left: 50%;
-    margin-left: -60px !important;
-    display: block;
+  width: 50%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px !important;
+  display: block;
 }
 
 .navbar-brand img{
@@ -48,7 +48,7 @@ navbar-collapse {
 }
 
 .navbar-toggle {
-    z-index:9;
+    z-index:3;
 }
 
 .header-im {
