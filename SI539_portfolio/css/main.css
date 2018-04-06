@@ -150,6 +150,12 @@ i {
   padding: 5%;
 }
 
+.btn {
+  display: block;
+  margin: auto;
+  width: 150px;
+}
+
 .btn-primary {
   color: #ffffff;
   background-color: rgba(92,102,173,0.9);
