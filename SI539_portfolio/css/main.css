@@ -16,15 +16,16 @@
   padding-right: 5%;
   background-color: white;
 }
+
 .navbar-brand {
   width: 50%;
   left: 0;
   top: 0;
-  text-align: center;
+  /* text-align: center; */
   margin: auto;
   position: absolute;
   left: 50%;
-  margin-left: -60px !important;
+  margin-left: -55px !important;
   display: block;
 }
 
@@ -41,10 +42,6 @@
   line-height: 0;
   text-align: center;
   margin-bottom: 2%;
-}
-
-navbar-collapse {
-  border: 0;
 }
 
 .navbar-toggle {
@@ -111,6 +108,11 @@ navbar-collapse {
   margin-bottom: 25px;
 }
 
+.about-caption {
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+
 footer {
   width: 100%;
   padding: 3%;
@@ -128,6 +130,29 @@ i {
  #map {
    height: 400px;
    width: 100%;
+}
+
+.mblock {
+  font-weight: 800;
+  font-size: 25px;
+  margin-bottom: 5%;
+}
+
+.example {
+  color:#F4C22D;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 175%;
+  background-image: url(../img/about/background.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  padding: 5%;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: rgba(92,102,173,0.9);
 }
 
 @media (max-width: 767px) {
