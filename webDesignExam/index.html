@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>WebDesignExam</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript">
+
+  	  function hideImg(){
+        var x = document.getElementById("img1");
+        x.style.display = "none"
+      }
+
+      function showImg() {
+        var y = documnet.getElementById("img1");
+        y.style.display = "block"
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <header>
+    </header>
+    <section>
+      <h1>Zhiyi Ma</h1>
+      <div>
+      <img class="img" id="img1" src="images/examPic.JPG" alt="picture of Colleen">
+      <img class="img" src="images/UMSI-logo.jpg" alt="picture of umsi logo">
+      </div>
+      <br>
+      <button type="button" onclick="hideImg()">Hide image</button>
+      <button type="button" onclick="showImg()">Show image</button>
+    </section>
+    <footer>
+    </footer>
+  </body>
+
+</html>
