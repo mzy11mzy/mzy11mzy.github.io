@@ -1,30 +1,9 @@
-/* p {
-  color: black;
-}
-
-img {
-  width: 50%;
-  display: block;
-  margin: auto;
-}
-
-@media (min-width: 375px) {
-  p {
-    color: red;
-  }
-}
-
-@media (min-width: 768px) {
-  p {
-    color: green;
-  }
-} */
 .img {
   display: inline-block;
   padding: 5%;
   border: 5px solid blue;
   width: 50%;
-
+  box-sizing: border-box;
 }
 
 div {
