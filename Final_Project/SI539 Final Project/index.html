@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>SI539 Final Project</title>
+	</head>
+<body>
+<h1>SI 539 Final Project</h1>
+
+<h2>Introduction</h2>
+
+<ul>
+	<li>Name: Zhiyi Ma</li>
+	<li>Role: Quality Assurance</li>
+	<li>Site Evaluated: <a href="https://leadersandbest.umich.edu/">Leadership &amp; Best</a></li>
+</ul>
+
+<h2>Check List</h2>
+
+<ul>
+	<li>Run through each page with the WAVE Chrome Extension. (<strong>Failed</strong>)</li>
+	<li>Users should be able to navigate through content using their keyboard. (<strong>Passed</strong>)</li>
+	<li>Users should be able to navigate content using a screen reader. (<strong>Failed</strong>)</li>
+	<li>The general architecture and hierarchy of the content should make sense. (<strong>Passed</strong>)</li>
+	<li>Charts and images should all have alt-text so that users with screen readers or users on a slow connection will still be able to understand the images. (<strong>Failed</strong>)</li>
+	<li>Decorative images should not be visible to screen readers. (<strong>Passed</strong>)</li>
+</ul>
+
+<h2>Suggestions</h2>
+
+<hr />
+
+<h3>Add alternative text to non-decorative image</h3>
+
+<p>In the home page, alt text of the image “Student Support”, “Engaged Learning”, and “Bold Ideas” is missing. I suggest putting the content of the image in the alt attribute so that users can understand the image given the situation that the network connection is slow or users uses a screen reader.</p>
+
+<figure><img src="img/DraggedImage.png"/></figure>
+
+<hr />
+
+<h3>Add text to make content readable and understandable</h3>
+
+<p>In the homepage, the website uses a simple image to imitate the text and button. Therefore, the accessibility is not good, especially for the users who view the website though the screen reader. I suggest replacing the fake text and button image by the code to make it readable and understandable.</p>
+
+<figure><img src="img/photo1115.jpg"/></figure>
+
+<hr />
+
+<h3>Increase the contrast between the text color and the background color</h3>
+
+<p>In the homepage, the color of the text in the navigation bar has a very low contrast with the background. I suggest adjusting the color of the text or background to increase the contrast.</p>
+
+<figure><img src="img/DraggedImage-1.png"/></figure>
+
+<hr />
+
+<h3>Fix the empty button</h3>
+
+<p>In the homepage, the search button doesn’t provide the value txt. Therefore, screen reader users cannot indicate the function of the button. I recommend adding descriptive text within the button tags.</p>
+
+</body>
+</html>
