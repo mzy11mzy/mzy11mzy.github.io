@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HearthStone Probability Explore</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="basic-probability.css">
+    <script type="text/javascript" src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="js/d3.tip.v0.6.3.js"></script>
+    <script src="visualization.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+
+<body>
+<div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+  <div class="col-md-2 col-md-offset-5">
+    <img id="logo" src="img/favicon.png" alt="HearthStone Logo">
+  </div>
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <h1>Probability and Expected Value of Hearthstone Card Pack</h1>
+  </div>
+  <!-- <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <blockquote>Sheathe your sword, draw your deck, and get ready for Hearthstone.</blockquote>
+  </div> -->
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <h2>Card Pack</h2>
+  </div>
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <p>Hearthstone is a collectible card game developed by Blizzard Entertainment and is set in the Warcraft universe. Each Hearthstone game is played with a 30-card deck, made up entirely of cards that have been unlocked in the player's collection. Cards are divided into 5 qualities, or rarity categories. Basic cards are cards that you are guaranteed to receive, either for finishing the tutorial or for leveling up classes. The other four rarities of cards correspond to the likelihood that the card will be opened up in a pack. Common cards are the most likely to appear in a pack, followed by Rare cards, then Epic cards, then Legendary cards. As cards increase in rarity, they tend to have more narrow or unique effects on the game. Though there are powerful and highly playable cards of all rarities, on average, high rarity cards tend to be more powerful than low rarity cards. And that's the reason why getting a lengary card from pack is the dream for every Heathstone player.</P>
+  </div>
+
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <img style="width:100%" src="img/introduction.png" alt="introdction">
+  </div>
+
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <h2>Arcane Dust</h2>
+    <p>Arcane Dust is the resource players use to construct cards of their choice. As Hearthstone packs contain random cards, acquiring Arcane Dust is the best way to acquire the specific cards you need for your collection. Any card in your collection can be disenchanted and turned into Arcane Dust, rewarding an amount of Arcane Dust to the player depending on the card's rarity. As each Hearthstone deck can contain a maximum of 2 copies of each card, every copy in your collection beyond the 2nd is unnecessary and should be turned into Arcane Dust. You can also disenchant any card that you do not intend to use.</p>
+  </div>
+  <div class="project-real-content col-sm-12 col-md-6 col-md-offset-3">
+    <img style="width:100%" src="img/dust.png" alt="introdction">
+  </div>
+
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <h2>Probability</h2>
+  </div>
+
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+    <p>Making predictions about something, like when will I draw a lengendary card , is always a difficult task. However, with the probability theory, we can provide the best estimate of the chace that you will get a lengendary card in your next pack. For example, we know the probability of drawing a legendary card is 1%, which means if you repeatedly open packs many times, you would expect about about one percent of the cards to be legendary. </p>
+  </div>
+
+
+<div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+  <div class="project-real-content col-md-10 col-md-offset-0">
+        <div id="card" style="float:left; display:inline; width:15%; margin-top:5%"></div>
+        <div id="cardButtons" style="float:left; display:inline; width:20%; margin-top:10%">
+            <button class="button-1" id="drawOne">Draw 5 Cards</button>
+            <button class="button-1" id="drawTen">Draw 50 Cards</button>
+        </div>
+        <div id="graph1" style="float:right; display:inline; width:50%"></div>
+    </div>
+    <div class="project-real-content col-md-6">
+    </div>
+</div>
+
+<div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+  <h2>Expected Value</h2>
+</div>
+
+<div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+  <p>The expected value of a discrete random variable is the probability-weighted average of all possible values. In other words, each possible value the random variable can assume is multiplied by its probability of occurring, and the resulting products are summed to produce the expected value.</p>
+  <p>In finite case, let X be a random variable with a finite number of finite outcomes x1, x2, x3, …, …xn occurring with probabilities with p1, p2, p3, …, …, pn, respectively. The expectation of X is defined as</P>
+</div>
+
+<div class="project-real-content col-sm-12 col-md-4 col-md-offset-4">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{300}&space;E(X)=\sum_{x\in&space;X}{xP(x)}" target="_blank"><img style="margin:10%; height:40px" src="https://latex.codecogs.com/png.latex?\dpi{300}&space;E(X)=\sum_{x\in&space;X}{xP(x)}" title="E(X)=\sum_{x\in X}{xP(x)}" /></a>
+</div>
+
+<div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+  <p>Consider the probabilistic experiment of rolling a fair die and watch as the running sample mean converges to the expected dust value of 20.54.<p>
+  <p>This table shows the likelihood of any single card being of a given rarity. And feel free to adjust the bar to change the distribution and observe how this hanges the expectation!<p>
+</div>
+
+<div class="project-real-content col-md-12 col-md-offset-1">
+
+  <div id="die" style="float:left; display:inline; width:10%; margin-top:10%"></div>
+  <div id="cdButtons" style="float:left; display:inline; width:8%; margin-top:14%">
+    <button class="button-1" id="openOne">Draw 5 Cards</button>
+    <button class="button-1" id="openTen">Draw 50 Cards</button>
+  </div>
+  <div id="graph2" style="float:left; display:inline; width:30%; margin-left:5%"></div>
+  <div id="graph3" style="float:left; display:inline; width:30%; margin-left:3%"></div>
+
+</div>
+
+
+
+
+
+</div>
+
+<footer class="container-fluid text-center">
+  <div class="project-real-content col-sm-12 col-md-10 col-md-offset-1">
+      <p style="margin-top:30%">2018 © Designed & Coded by Zhiyi Ma.</p>
+  </div>
+</footer>
+
+<body>
+
+
+
+<html>
