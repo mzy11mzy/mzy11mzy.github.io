@@ -1,19 +1,15 @@
-// d3.tip
-// Copyright (c) 2013 Justin Palmer
-//
-// Tooltips for d3.js SVG visualizations
+//d3.tip
+//Copyright (c) 2013 Justin Palmer
+//Adapted from https://github.com/Caged/d3-tip
 
-// Public - contructs a new tooltip
-//
-// Returns a tip
 d3.tip = function() {
   var direction = d3_tip_direction,
-      offset    = d3_tip_offset,
-      html      = d3_tip_html,
-      node      = initNode(),
-      svg       = null,
-      point     = null,
-      target    = null
+    offset = d3_tip_offset,
+    html = d3_tip_html,
+    node = initNode(),
+    svg = null,
+    point = null,
+    target = null
 
   function tip(vis) {
     svg = getSVGNode(vis)
@@ -21,26 +17,29 @@ d3.tip = function() {
     document.body.appendChild(node)
   }
 
-  // Public - show the tooltip on the screen
-  //
-  // Returns a tip
   tip.show = function() {
     var args = Array.prototype.slice.call(arguments)
-    if(args[args.length - 1] instanceof SVGElement) target = args.pop()
+    if (args[args.length - 1] instanceof SVGElement)
+      target = args.pop()
 
     var content = html.apply(this, args),
-        poffset = offset.apply(this, args),
-        dir     = direction.apply(this, args),
-        nodel   = d3.select(node), i = 0,
-        coords
+      poffset = offset.apply(this, args),
+      dir = direction.apply(this, args),
+      nodel = d3.select(node),
+      i = 0,
+      coords
 
     nodel.html(content)
-      .style({ opacity: 1, 'pointer-events': 'all', display: "block" })
+      .style({
+        opacity: 1,
+        'pointer-events': 'all',
+        display: "block"
+      })
 
-    while(i--) nodel.classed(directions[i], false)
+    while (i--) nodel.classed(directions[i], false)
     coords = direction_callbacks.get(dir).apply(this)
     nodel.classed(dir, true).style({
-      top: (coords.top +  poffset[0]) + 'px',
+      top: (coords.top + poffset[0]) + 'px',
       left: (coords.left + poffset[1]) + 'px'
     })
 
@@ -52,21 +51,19 @@ d3.tip = function() {
   // Returns a tip
   tip.hide = function() {
     nodel = d3.select(node)
-    nodel.style({ opacity: 0, 'pointer-events': 'none', display: "none" })
+    nodel.style({
+      opacity: 0,
+      'pointer-events': 'none',
+      display: "none"
+    })
     return tip
   }
 
-  // Public: Proxy attr calls to the d3 tip container.  Sets or gets attribute value.
-  //
-  // n - name of the attribute
-  // v - value of the attribute
-  //
-  // Returns tip or attribute value
   tip.attr = function(n, v) {
     if (arguments.length < 2 && typeof n === 'string') {
       return d3.select(node).attr(n)
     } else {
-      var args =  Array.prototype.slice.call(arguments)
+      var args = Array.prototype.slice.call(arguments)
       d3.selection.prototype.attr.apply(d3.select(node), args)
     }
 
@@ -83,7 +80,7 @@ d3.tip = function() {
     if (arguments.length < 2 && typeof n === 'string') {
       return d3.select(node).style(n)
     } else {
-      var args =  Array.prototype.slice.call(arguments)
+      var args = Array.prototype.slice.call(arguments)
       d3.selection.prototype.style.apply(d3.select(node), args)
     }
 
@@ -127,27 +124,33 @@ d3.tip = function() {
     return tip
   }
 
-  function d3_tip_direction() { return 'n' }
-  function d3_tip_offset() { return [0, 0] }
-  function d3_tip_html() { return ' ' }
+  function d3_tip_direction() {
+    return 'n'
+  }
+  function d3_tip_offset() {
+    return [0, 0]
+  }
+  function d3_tip_html() {
+    return ' '
+  }
 
   var direction_callbacks = d3.map({
-    n:  direction_n,
-    s:  direction_s,
-    e:  direction_e,
-    w:  direction_w,
-    nw: direction_nw,
-    ne: direction_ne,
-    sw: direction_sw,
-    se: direction_se
-  }),
+      n: direction_n,
+      s: direction_s,
+      e: direction_e,
+      w: direction_w,
+      nw: direction_nw,
+      ne: direction_ne,
+      sw: direction_sw,
+      se: direction_se
+    }),
 
-  directions = direction_callbacks.keys()
+    directions = direction_callbacks.keys()
 
   function direction_n() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.n.y + screen.top - node.offsetHeight,
+      top: screen.bbox.n.y + screen.top - node.offsetHeight,
       left: screen.bbox.n.x + screen.left - node.offsetWidth / 2
     }
   }
@@ -155,7 +158,7 @@ d3.tip = function() {
   function direction_s() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.s.y + screen.top,
+      top: screen.bbox.s.y + screen.top,
       left: screen.bbox.s.x + screen.left - node.offsetWidth / 2
     }
   }
@@ -163,7 +166,7 @@ d3.tip = function() {
   function direction_e() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.e.y + screen.top - node.offsetHeight / 2,
+      top: screen.bbox.e.y + screen.top - node.offsetHeight / 2,
       left: screen.bbox.e.x + screen.left
     }
   }
@@ -171,7 +174,7 @@ d3.tip = function() {
   function direction_w() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.w.y + screen.top - node.offsetHeight / 2,
+      top: screen.bbox.w.y + screen.top - node.offsetHeight / 2,
       left: screen.bbox.w.x + screen.left - node.offsetWidth
     }
   }
@@ -179,7 +182,7 @@ d3.tip = function() {
   function direction_nw() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.nw.y + screen.top - node.offsetHeight,
+      top: screen.bbox.nw.y + screen.top - node.offsetHeight,
       left: screen.bbox.nw.x + screen.left - node.offsetWidth
     }
   }
@@ -187,7 +190,7 @@ d3.tip = function() {
   function direction_ne() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.ne.y + screen.top - node.offsetHeight,
+      top: screen.bbox.ne.y + screen.top - node.offsetHeight,
       left: screen.bbox.ne.x + screen.left
     }
   }
@@ -195,7 +198,7 @@ d3.tip = function() {
   function direction_sw() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.sw.y + screen.top,
+      top: screen.bbox.sw.y + screen.top,
       left: screen.bbox.sw.x + screen.left - node.offsetWidth
     }
   }
@@ -203,7 +206,7 @@ d3.tip = function() {
   function direction_se() {
     var screen = getScreenBBox()
     return {
-      top:  screen.bbox.se.y + screen.top,
+      top: screen.bbox.se.y + screen.top,
       left: screen.bbox.e.x + screen.left
     }
   }
@@ -222,36 +225,23 @@ d3.tip = function() {
 
   function getSVGNode(el) {
     el = el.node()
-    if(el.tagName.toLowerCase() == 'svg')
+    if (el.tagName.toLowerCase() == 'svg')
       return el
 
     return el.ownerSVGElement
   }
 
-  // Private - gets the screen coordinates of a shape
-  //
-  // Given a shape on the screen, will return an SVGPoint for the directions
-  // n(north), s(south), e(east), w(west), ne(northeast), se(southeast), nw(northwest),
-  // sw(southwest).
-  //
-  //    +-+-+
-  //    |   |
-  //    +   +
-  //    |   |
-  //    +-+-+
-  //
-  // Returns an Object {n, s, e, w, nw, sw, ne, se}
   function getScreenBBox() {
-    var targetel   = target || d3.event.target,
-        bbox       = {},
-        matrix     = targetel.getScreenCTM(),
-        tbbox      = targetel.getBBox(),
-        width      = tbbox.width,
-        height     = tbbox.height,
-        x          = tbbox.x,
-        y          = tbbox.y,
-        scrollTop  = document.documentElement.scrollTop || document.body.scrollTop,
-        scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft
+    var targetel = target || d3.event.target,
+      bbox = {},
+      matrix = targetel.getScreenCTM(),
+      tbbox = targetel.getBBox(),
+      width = tbbox.width,
+      height = tbbox.height,
+      x = tbbox.x,
+      y = tbbox.y,
+      scrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+      scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft
 
 
     point.x = x
@@ -264,7 +254,7 @@ d3.tip = function() {
     point.x -= width
     bbox.sw = point.matrixTransform(matrix)
     point.y -= height / 2
-    bbox.w  = point.matrixTransform(matrix)
+    bbox.w = point.matrixTransform(matrix)
     point.x += width
     bbox.e = point.matrixTransform(matrix)
     point.x -= width / 2
@@ -273,7 +263,11 @@ d3.tip = function() {
     point.y += height
     bbox.s = point.matrixTransform(matrix)
 
-    return {"bbox" : bbox, "top" : scrollTop, "left" : scrollLeft}
+    return {
+      "bbox": bbox,
+      "top": scrollTop,
+      "left": scrollLeft
+    }
   }
 
   return tip

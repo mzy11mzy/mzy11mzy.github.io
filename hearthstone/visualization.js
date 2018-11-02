@@ -1,11 +1,10 @@
 
-//Handles functionality of Probability
 $(window).load(function() {
   probability();
   expectation();
 });
 
-//Handles CSS animation for card and die
+//CSS animation for card and die
 //Adapted from http://jsfiddle.net/byrichardpowell/38MGS/1/
 $.fn.animatecss = function(anim, time, cb) {
   if (time) this.css('-webkit-transition', time / 1000 + 's');
@@ -31,6 +30,7 @@ function cumsum(array) {
 //*******************************************************************************//
 //probability
 //*******************************************************************************//
+
 function probability() {
   //Variables
   var cardCount = [0, 0, 0, 0];
@@ -559,7 +559,7 @@ function expectation() {
     //Update Rects
     updateDie();
 
-    //Constants Expectation Die
+    //Constants Expectation
     //var w = d3.select('#graph3').node().clientWidth;
     var w = 300;
     var h = 300;
