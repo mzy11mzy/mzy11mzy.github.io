@@ -226,7 +226,6 @@ function probability() {
 
   //Update SVG based on width of container
   function drawCard() {
-    //var width = d3.select('#graph1').node().clientWidth;
     var width = 450;
     var height = 450;
     var padCard = 150;
