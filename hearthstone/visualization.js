@@ -1,4 +1,3 @@
-
 $(window).load(function() {
   probability();
   expectation();
@@ -12,7 +11,7 @@ $.fn.animatecss = function(anim, time, cb) {
   if ($.isFunction(cb)) {
     setTimeout(function() {
       $(this).each(cb);
-    }, (time) ? time : 250);
+    }, (time) ? time : 200);
   }
   return this;
 };
@@ -26,10 +25,12 @@ function cumsum(array) {
   return resultArray;
 }
 
-
 //*******************************************************************************//
 //probability
 //*******************************************************************************//
+
+//This work is built based on the visualization from seeing theory.(https://seeing-theory.brown.edu/basic-probability/index.html)
+//Major changes include: change the coin and die situation into hearthstone card, improve the interactiona and layout to make operating process more easily.
 
 function probability() {
   //Variables
@@ -96,8 +97,8 @@ function probability() {
 
 
   //Create tool tips for observed and expected
-  var tipCardObs = d3.tip().attr('id', 'tipCardObs').attr('class', 'd3-tip').offset([-10, 0]);
-  var tipCardTheo = d3.tip().attr('id', 'tipCardTheo').attr('class', 'd3-tip').offset([-10, 0]);
+  var tipCardObs = d3.tip().attr('id', 'tipCardObs').attr('class', 'd3-tip').offset([-15, 0]);
+  var tipCardTheo = d3.tip().attr('id', 'tipCardTheo').attr('class', 'd3-tip').offset([-15, 0]);
 
   //Update rectangles and text
   function updateCard(t) {
@@ -453,7 +454,7 @@ function expectation() {
   var maxXExpected = 200;
   var expectedPlot = d3.select("#graph3").append("svg");
   var xaxisDie = expectedPlot.append("g").attr("class", "x axis");
-  var xaxisTextDie = expectedPlot.append("text").attr("text-anchor", "middle").text("Number of Rolls");
+  var xaxisTextDie = expectedPlot.append("text").attr("text-anchor", "middle").text("Number of Cards");
   var yaxisDie = expectedPlot.append("g").attr("class", "y axis");
   var yaxisTextDie = expectedPlot.append("text").attr("text-anchor", "middle").text("Value");
   var pathExpected = expectedPlot.append("path").attr("id", "expected");
@@ -559,7 +560,6 @@ function expectation() {
     updateDie();
 
     //Constants Expectation
-    //var w = d3.select('#graph3').node().clientWidth;
     var w = 300;
     var h = 300;
     var padExp = 35;
